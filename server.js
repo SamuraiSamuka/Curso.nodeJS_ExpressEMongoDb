@@ -1,18 +1,18 @@
-const http = require("http");
-const port = 3000;
+// const http = require("http");
+// const rotas = {
+  //   '/': 'Curso de Node',
+//   '/livros': 'Entrei na pag de livros',
+//   '/autores': 'Listagem de autores',
+//   '/editora': 'Pag de editora',
+//   '/sobre': 'Info sobre o projeto'
+// }
 
-const rotas = {
-  '/': 'Curso de Node',
-  '/livros': 'Entrei na pag de livros',
-  '/autores': 'Listagem de autores',
-  '/editora': 'Pag de editora',
-  '/sobre': 'Info sobre o projeto'
-}
+// const server = http.createServer((req, res) => {
+  //   res.writeHead(200, {'content-Type': 'text/plain'})
+  //   res.end(rotas[req.url]);
+  // })
+import app from './src/app.js'
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'content-Type': 'text/plain'})
-  console.log(req.url)
-  res.end(rotas[req.url]);
-})
+const port = process.env.PORT || 3000;
 
-server.listen(port, () => {console.log(`Servidor ouvindo na porta http://localhost:${port}`)});
+app.listen(port, () => {console.log(`Servidor ouvindo na porta http://localhost:${port}`)});
