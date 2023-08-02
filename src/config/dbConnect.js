@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 // import { MongoClient, ServerApiVersion } from "mongodb";
 
-const mongoAtlasUri = "mongodb+srv://samuelcarvalhodev:N20dhfMJP7pMRojo@alura.4gscso8.mongodb.net/?retryWrites=true&w=majority"
-// const client = new MongoClient(mongoAtlasUri, {
+const uriMongoAtlas = "mongodb+srv://samuelcarvalhodev:N20dhfMJP7pMRojo@alura.4gscso8.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uriMongoAtlas, {
 //   serverApi: {
 //     version: ServerApiVersion.v1,
 //     strict: true,
@@ -25,6 +25,6 @@ const mongoAtlasUri = "mongodb+srv://samuelcarvalhodev:N20dhfMJP7pMRojo@alura.4g
 
 // mongoose.connect("mongodb://localhost:27017/alura")
 // const Livro = mongoose.model('Livro', {titulo: String, numeropaginas: Int32, })
-mongoose.connect(mongoAtlasUri)
-let db = mongoose.connection
-export default db
+mongoose.connect(uriMongoAtlas);
+let db = mongoose.connection;
+export default db;
