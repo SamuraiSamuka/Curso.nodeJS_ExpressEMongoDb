@@ -1,4 +1,4 @@
-import autores from '../models/Autor.js';
+import autores from "../models/Autor.js";
 
 class AutorController {
   static listarAutores = async (req, res) => {
@@ -8,7 +8,7 @@ class AutorController {
     } catch (err) {
       res.status(500).send({message: `${err.message} - falha ao listar autores.`});
     }
-  }
+  };
 
   static buscarAutor = async (req, res) => {
     try {
@@ -18,7 +18,7 @@ class AutorController {
     } catch (err) {
       res.status(500).send({message: `${err.message} - id do autor não localizado.`});
     }
-  }
+  };
 
   static cadastrarAutor = async (req, res) => {
     try {
@@ -28,7 +28,7 @@ class AutorController {
     } catch (err) {
       res.status(500).send({message: `${err.message} - falha ao cadastrar autor.`});
     }
-  }
+  };
 
   static atualizarAutor = async (req, res) => {
     try {
@@ -38,17 +38,17 @@ class AutorController {
     } catch (err) {
       res.status(500).send({message: `${err.message} - falha ao atualizar autor.`});
     }
-  }
+  };
 
   static deletarAutor = async (req, res) => {
     try {
       const {id} = req.params;
-      await autores.findByIdAndDelete(id)
+      await autores.findByIdAndDelete(id);
       res.status(201).send("Autor deletado com sucesso.");
     } catch (err) {
       res.status(500).send({message: `${err.message} - falha ao deletar autor.`});
     }
-  }
+  };
 }
 
 export default AutorController;

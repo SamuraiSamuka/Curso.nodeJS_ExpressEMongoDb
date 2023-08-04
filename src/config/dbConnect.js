@@ -9,7 +9,7 @@ async function conectaDb(){
   try {
     await mongoose.connect(uriMongoAtlas);
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 

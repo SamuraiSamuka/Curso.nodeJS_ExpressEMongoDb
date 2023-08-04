@@ -8,19 +8,19 @@ const client = new MongoClient(uriMongoAtlas, {
     strict: true,
     deprecationErrors: true
   }
-})
+});
 
 async function run() {
   try {
-    await client.connect()
-    const coll = await client.db("alura").alura
-    console.log(coll)
-    console.log("Pinged your deployment. You successfully connected to MongoDB!")
+    await client.connect();
+    const coll = await client.db("alura").alura;
+    console.log(coll);
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
-    await client.close()
+    await client.close();
   }
 }
 
-run().catch(console.dir)
+run().catch(console.dir);
 
 export default run;
