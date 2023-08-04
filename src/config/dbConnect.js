@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const uriMongoAtlas = "mongodb+srv://samuelcarvalhodev:N20dhfMJP7pMRojo@alura.4gscso8.mongodb.net/?retryWrites=true&w=majority";
+const uriMongoAtlas = process.env.STRING_CONEXAO_DB;
 
 
 // mongoose.connect("mongodb://localhost:27017/alura")

@@ -11,6 +11,7 @@
   //   res.writeHead(200, {'content-Type': 'text/plain'})
   //   res.end(rotas[req.url]);
   // })
+import "dotenv/config.js"
 import app from './src/app.js'
 
 const port = process.env.PORT || 3000;
